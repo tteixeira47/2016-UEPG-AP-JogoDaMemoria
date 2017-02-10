@@ -808,3 +808,5 @@ void finaliza (void)
 {
 	allegro_exit();
 }
+
+//made with love by tteixeira47
