@@ -89,6 +89,8 @@ void principal (void)
     //Botões do Mouse
 	int	botEsq,
 		botDir;
+	//Arquivo de registro de pontos
+	FILE *fp;
 	//Tabuleiro
     BITMAP	*tela;
     //Cartas do gabarito
@@ -769,6 +771,10 @@ void principal (void)
 	   sfinal2=0;
        else
            sfinal2=(((float)score2/jogada2)*100)+score2*10;
+    //Gravar pontuação em arquivo modo texto
+      fp=fopen("C:\\Users\\Thiago.TEIXEIRA\\Documents\\UEPG\\ALGORITMOS\\prog\\project-all_zheimer\\registros\\Registro.txt", "a");
+      fprintf (fp, "Player 1: %.0f, Player 2: %.0f | Data: %s Hora: %s\n", sfinal1, sfinal2, __DATE__,__TIME__);
+      fclose(fp);
     //Vencedor
     if (score1==0 && score2==0){
 		textout_centre(tela, font, "Jogo encerrado", MAX_X / 2, 200, 4);
