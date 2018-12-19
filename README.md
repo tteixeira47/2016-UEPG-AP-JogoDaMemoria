@@ -1,2 +1,2 @@
-# project-all_zheimer
-Project of a Memory Game using C language and the library Allegro.
+# Jogo da Memória em C + Allegro
+Projeto desenvolvido na matéria de Algoritmos e Programação do primeiro ano do curso de Engenharia de Software da UEPG.
